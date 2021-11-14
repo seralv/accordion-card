@@ -377,3 +377,13 @@ body {
   font: normal 100% "Kumbh Sans", sans-serif;
   font-size: 12px;
 }
+
+footer .attribution {
+  font-size: 11px;
+  text-align: center;
+  color: #fff;
+}
+footer .attribution a {
+  color: #ffd900;
+  padding: 0;
+}
