@@ -358,6 +358,7 @@ html {
 
 body {
   background-image: linear-gradient(#af67e9, #6565e7);
+  background-repeat: no-repeat;
 }
 
 /**
@@ -386,4 +387,39 @@ footer .attribution {
 footer .attribution a {
   color: #ffd900;
   padding: 0;
+}
+
+main {
+  background-color: #fff;
+  background-image: url("../../../docs/images/bg-pattern-mobile.svg");
+  background-repeat: no-repeat;
+  margin: 100px 20px;
+  padding: 5px;
+  border-radius: 25px;
+}
+main h1 {
+  color: #1d1e35;
+  font-size: 30px;
+  font-weight: 700;
+  text-align: center;
+}
+main .wrapper .accordion {
+  color: #4a4b5e;
+  background: #fff;
+  border-radius: 5px;
+  font-weight: 700;
+  margin: 10px;
+  padding: 10px 5px;
+  cursor: pointer;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main .wrapper .accordion img {
+  height: 100%;
+}
+main .wrapper .accordionDrop {
+  color: #787887;
+  padding: 0px 30px;
 }

@@ -1,0 +1,37 @@
+main {
+  background-color: #fff;
+  background-image: url('../../../docs/images/bg-pattern-mobile.svg');
+  background-repeat: no-repeat;
+  margin: 100px 20px;
+  padding: 5px;
+  border-radius: 25px;
+      
+  h1 {
+    color: $very-dark-desaturated-blue;
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+  }
+  .wrapper {
+    .accordion {
+      color: $very-dark-grayish-blue;
+      background: #fff;
+      border-radius: 5px;
+      font-weight: 700;
+      margin: 10px;
+      padding: 10px 5px;
+      cursor: pointer;
+      list-style-type: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      img {
+          height: 100%;
+      }
+    }
+    .accordionDrop {
+      color: $dark-grayish-blue;
+      padding: 0px 30px;
+    }
+  }
+}
