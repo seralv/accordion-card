@@ -11,27 +11,40 @@ main {
     font-size: 30px;
     font-weight: 700;
     text-align: center;
+    margin-top: 120px;
   }
   .wrapper {
-    .accordion {
-      color: $very-dark-grayish-blue;
-      background: #fff;
-      border-radius: 5px;
-      font-weight: 700;
-      margin: 10px;
-      padding: 10px 5px;
-      cursor: pointer;
-      list-style-type: none;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      img {
-          height: 100%;
+    details {
+      summary {
+        color: $very-dark-grayish-blue;
+        background: #fff;
+        border-radius: 5px;
+        margin: 10px;
+        padding: 10px 5px 0;
+        cursor: pointer;
+        list-style-type: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
       }
+      .accordionDrop {
+        color: $dark-grayish-blue;
+        padding: 10px 50px 10px 15px;
+      }
+      &[open] {
+        summary {
+          font-weight: 700;
+        }
+        img {
+          transform: rotate(180deg);
+        }        
+      } 
     }
-    .accordionDrop {
-      color: $dark-grayish-blue;
-      padding: 0px 30px;
+    hr {
+      border: none;
+      height: 1px;
+      background-color: hsl(0, 0%, 90%);
+      margin: 0 15px;
     }
   }
 }
