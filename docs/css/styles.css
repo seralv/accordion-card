@@ -379,6 +379,31 @@ body {
   font-size: 12px;
 }
 
+@keyframes box-animation {
+  0% {
+    top: -135px;
+  }
+  50% {
+    top: -125px;
+  }
+  100% {
+    top: -135px;
+  }
+}
+@keyframes pattern-animation {
+  0% {
+    top: 10px;
+    transform: translateX(-50%) scale(1.1);
+  }
+  50% {
+    top: 0px;
+    transform: translateX(-50%) scale(1);
+  }
+  100% {
+    top: 10px;
+    transform: translateX(-50%) scale(1.1);
+  }
+}
 footer .attribution {
   font-size: 11px;
   text-align: center;
@@ -413,19 +438,7 @@ main {
     top: -135px;
     left: 50%;
     transform: translateX(-50%);
-    -webkit-animation: box-animation 2.5s infinite ease-in-out;
     animation: box-animation 2.5s infinite ease-in-out;
-  }
-  @-webkit-keyframes box-animation {
-    0% {
-      top: -135px;
-    }
-    50% {
-      top: -125px;
-    }
-    100% {
-      top: -135px;
-    }
   }
   main .pattern-mobile {
     position: absolute;
@@ -433,22 +446,7 @@ main {
     z-index: 2;
     left: 50%;
     transform: translateX(-50%);
-    -webkit-animation: pattern-animation 2.5s infinite ease-in-out;
     animation: pattern-animation 2.5s infinite ease-in-out;
-  }
-  @-webkit-keyframes pattern-animation {
-    0% {
-      top: 10px;
-      transform: translateX(-50%) scale(1.1);
-    }
-    50% {
-      top: 0px;
-      transform: translateX(-50%) scale(1);
-    }
-    100% {
-      top: 10px;
-      transform: translateX(-50%) scale(1.1);
-    }
   }
 }
 main h1 {

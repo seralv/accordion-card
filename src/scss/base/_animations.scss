@@ -1,0 +1,26 @@
+@keyframes box-animation {
+  0% {
+    top: -135px;
+  }
+  50% {
+    top: -125px;
+  }
+  100% {
+    top: -135px;
+  }
+}
+
+@keyframes pattern-animation {
+  0% {
+    top: 10px;
+    transform: translateX(-50%) scale(1.1);
+  }
+  50% {
+    top: 0px;
+    transform: translateX(-50%) scale(1.0);
+  }
+  100% {
+    top: 10px;
+    transform: translateX(-50%) scale(1.1);
+  }
+}
