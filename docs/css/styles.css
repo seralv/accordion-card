@@ -404,6 +404,17 @@ body {
     transform: translateX(-50%) scale(1.1);
   }
 }
+@keyframes box-animation {
+  0% {
+    top: 59%;
+  }
+  50% {
+    top: 55%;
+  }
+  100% {
+    top: 59%;
+  }
+}
 footer .attribution {
   font-size: 11px;
   text-align: center;
@@ -449,12 +460,70 @@ main {
     animation: pattern-animation 2.5s infinite ease-in-out;
   }
 }
+@media (min-width: 1024px) {
+  main {
+    margin: 140px 230px;
+  }
+  main .graphics-mobile {
+    display: none;
+  }
+  main .graphics {
+    overflow: hidden;
+  }
+  main .graphics-desktop, main .graphics-desktop-box, main .graphics-desktop-pattern {
+    display: flex;
+  }
+  main .graphics-desktop {
+    width: 90%;
+    position: relative;
+    height: 100%;
+  }
+  main .graphics-desktop-pattern {
+    position: absolute;
+    width: 200%;
+    z-index: 97;
+    left: 0;
+    top: 0;
+  }
+  main .graphics-desktop-box {
+    position: absolute;
+    width: 22%;
+    z-index: 99;
+    left: 0;
+    top: 0;
+    transform: translate(0, -50%);
+    animation: box-animation 3s infinite ease-in-out;
+  }
+  main .graphics-desktop-woman {
+    position: absolute;
+    width: 100%;
+    z-index: 98;
+    left: 0;
+    top: 0;
+    transform: translate(0, -50%);
+  }
+}
 main h1 {
   color: #1d1e35;
   font-size: 30px;
   font-weight: 700;
   text-align: center;
-  margin-top: 120px;
+  margin-top: 150px;
+}
+@media (min-width: 1024px) {
+  main h1 {
+    margin: 40px 0;
+    text-align: left;
+    padding: 0 0 0 415px;
+  }
+}
+main .wrapper {
+  padding-bottom: 50px;
+}
+@media (min-width: 1024px) {
+  main .wrapper {
+    padding: 0 0 50px 400px;
+  }
 }
 main .wrapper details summary {
   color: #4a4b5e;

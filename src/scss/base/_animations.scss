@@ -24,3 +24,15 @@
     transform: translateX(-50%) scale(1.1);
   }
 }
+
+@keyframes box-animation {
+  0% {
+    top: 59%;
+  }
+  50% {
+    top: 55%;
+  }
+  100% {
+    top: 59%;
+  }
+}
