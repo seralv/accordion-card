@@ -391,11 +391,65 @@ footer .attribution a {
 
 main {
   background-color: #fff;
-  background-image: url("../../../docs/images/bg-pattern-mobile.svg");
-  background-repeat: no-repeat;
-  margin: 100px 20px;
+  margin: 160px 20px;
   padding: 5px;
   border-radius: 25px;
+}
+@media (min-width: 320px) {
+  main .graphics-desktop, main .graphics-desktop-box {
+    display: none;
+  }
+  main .graphics-mobile {
+    width: 100%;
+    position: relative;
+  }
+  main .graphics-mobile img {
+    max-width: 100%;
+  }
+  main .woman-mobile {
+    position: absolute;
+    z-index: 3;
+    width: 80%;
+    top: -135px;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-animation: box-animation 2.5s infinite ease-in-out;
+    animation: box-animation 2.5s infinite ease-in-out;
+  }
+  @-webkit-keyframes box-animation {
+    0% {
+      top: -135px;
+    }
+    50% {
+      top: -125px;
+    }
+    100% {
+      top: -135px;
+    }
+  }
+  main .pattern-mobile {
+    position: absolute;
+    width: 80%;
+    z-index: 2;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-animation: pattern-animation 2.5s infinite ease-in-out;
+    animation: pattern-animation 2.5s infinite ease-in-out;
+  }
+  @-webkit-keyframes pattern-animation {
+    0% {
+      top: 10px;
+      transform: translateX(-50%) scale(1.1);
+    }
+    50% {
+      top: 0px;
+      transform: translateX(-50%) scale(1);
+    }
+    100% {
+      top: 10px;
+      transform: translateX(-50%) scale(1.1);
+    }
+  }
 }
 main h1 {
   color: #1d1e35;
