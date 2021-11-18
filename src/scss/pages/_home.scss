@@ -3,6 +3,7 @@ main {
   margin: 160px 20px;
   padding: 5px;
   border-radius: 25px;
+  max-width: $max-width;
   .graphics-desktop, .graphics-desktop-box {
     display: none;
   }
