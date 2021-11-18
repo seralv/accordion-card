@@ -379,7 +379,7 @@ body {
   font-size: 12px;
 }
 
-@keyframes box-animation {
+@-webkit-keyframes box-animation-woman {
   0% {
     top: -135px;
   }
@@ -388,6 +388,31 @@ body {
   }
   100% {
     top: -135px;
+  }
+}
+@keyframes box-animation-woman {
+  0% {
+    top: -135px;
+  }
+  50% {
+    top: -125px;
+  }
+  100% {
+    top: -135px;
+  }
+}
+@-webkit-keyframes pattern-animation {
+  0% {
+    top: 10px;
+    transform: translateX(-50%) scale(1.1);
+  }
+  50% {
+    top: 0px;
+    transform: translateX(-50%) scale(1);
+  }
+  100% {
+    top: 10px;
+    transform: translateX(-50%) scale(1.1);
   }
 }
 @keyframes pattern-animation {
@@ -402,6 +427,17 @@ body {
   100% {
     top: 10px;
     transform: translateX(-50%) scale(1.1);
+  }
+}
+@-webkit-keyframes box-animation {
+  0% {
+    top: 59%;
+  }
+  50% {
+    top: 55%;
+  }
+  100% {
+    top: 59%;
   }
 }
 @keyframes box-animation {
@@ -431,47 +467,54 @@ main {
   padding: 5px;
   border-radius: 25px;
 }
-@media (min-width: 320px) {
-  main .graphics-desktop, main .graphics-desktop-box {
-    display: none;
-  }
-  main .graphics-mobile {
-    width: 100%;
-    position: relative;
-  }
-  main .graphics-mobile img {
-    max-width: 100%;
-  }
-  main .woman-mobile {
-    position: absolute;
-    z-index: 3;
-    width: 80%;
-    top: -135px;
-    left: 50%;
-    transform: translateX(-50%);
-    animation: box-animation 2.5s infinite ease-in-out;
-  }
-  main .pattern-mobile {
-    position: absolute;
-    width: 80%;
-    z-index: 2;
-    left: 50%;
-    transform: translateX(-50%);
-    animation: pattern-animation 2.5s infinite ease-in-out;
-  }
+main .graphics-desktop, main .graphics-desktop-box {
+  display: none;
+}
+main .graphics-mobile {
+  width: 100%;
+  position: relative;
+}
+main .graphics-mobile img {
+  max-width: 100%;
+}
+main .woman-mobile {
+  position: absolute;
+  z-index: 3;
+  width: 80%;
+  top: -135px;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-animation: box-animation-woman 2.5s infinite ease-in-out;
+  animation: box-animation-woman 2.5s infinite ease-in-out;
+}
+main .pattern-mobile {
+  position: absolute;
+  width: 80%;
+  z-index: 2;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-animation: pattern-animation 2.5s infinite ease-in-out;
+  animation: pattern-animation 2.5s infinite ease-in-out;
 }
 @media (min-width: 1024px) {
   main {
-    margin: 140px 230px;
-  }
-  main .graphics-mobile {
-    display: none;
+    display: flex;
+    margin: 150px;
+    padding: 0;
   }
   main .graphics {
+    width: 50%;
     overflow: hidden;
   }
-  main .graphics-desktop, main .graphics-desktop-box, main .graphics-desktop-pattern {
+  main .graphics-mobile, main .woman-mobile, main .pattern-mobile {
+    display: none;
+  }
+  main .graphics-desktop, main .graphics-desktop-box {
     display: flex;
+  }
+  main .graphics {
+    width: 50%;
+    overflow: hidden;
   }
   main .graphics-desktop {
     width: 90%;
@@ -482,28 +525,32 @@ main {
     position: absolute;
     width: 200%;
     z-index: 97;
-    left: 0;
-    top: 0;
+    left: -430px;
+    top: -250px;
   }
   main .graphics-desktop-box {
     position: absolute;
-    width: 22%;
+    width: 11%;
     z-index: 99;
-    left: 0;
-    top: 0;
-    transform: translate(0, -50%);
+    left: 9%;
+    top: 100px;
+    transform: translate(0, -390%);
+    -webkit-animation: box-animation 3s infinite ease-in-out;
     animation: box-animation 3s infinite ease-in-out;
   }
   main .graphics-desktop-woman {
     position: absolute;
     width: 100%;
     z-index: 98;
-    left: 0;
-    top: 0;
+    left: -50px;
+    top: 50%;
     transform: translate(0, -50%);
   }
 }
-main h1 {
+main .wrapper {
+  padding-bottom: 50px;
+}
+main .wrapper h1 {
   color: #1d1e35;
   font-size: 30px;
   font-weight: 700;
@@ -511,18 +558,14 @@ main h1 {
   margin-top: 150px;
 }
 @media (min-width: 1024px) {
-  main h1 {
-    margin: 40px 0;
+  main .wrapper h1 {
+    margin: 50px 15px 30px;
     text-align: left;
-    padding: 0 0 0 415px;
   }
-}
-main .wrapper {
-  padding-bottom: 50px;
 }
 @media (min-width: 1024px) {
   main .wrapper {
-    padding: 0 0 50px 400px;
+    width: 50%;
   }
 }
 main .wrapper details summary {

@@ -1,38 +1,95 @@
-@keyframes box-animation {
+@-webkit-keyframes box-animation-woman {
+           
   0% {
-    top: -135px;
+      top: -135px;
   }
+
   50% {
-    top: -125px;
+      top: -125px; 
   }
+
   100% {
-    top: -135px;
+      top: -135px; 
+  }
+}
+
+@keyframes box-animation-woman {
+     
+  0% {
+      top: -135px;
+  }
+
+  50% {
+      top: -125px; 
+  }
+
+  100% {
+      top: -135px; 
+  }
+}
+
+@-webkit-keyframes pattern-animation {
+           
+  0% {
+      top: 10px;
+      transform: translateX(-50%) scale(1.1);
+  }
+
+  50% {
+      top: 0px; 
+      transform: translateX(-50%) scale(1.0);
+  }
+
+  100% {
+      top: 10px; 
+      transform: translateX(-50%) scale(1.1);
   }
 }
 
 @keyframes pattern-animation {
+     
   0% {
-    top: 10px;
-    transform: translateX(-50%) scale(1.1);
+      top: 10px;
+      transform: translateX(-50%) scale(1.1);
   }
+
   50% {
-    top: 0px;
-    transform: translateX(-50%) scale(1.0);
+      top: 0px; 
+      transform: translateX(-50%) scale(1.0);
   }
+
   100% {
-    top: 10px;
-    transform: translateX(-50%) scale(1.1);
+      top: 10px; 
+      transform: translateX(-50%) scale(1.1);
+  }
+}
+
+@-webkit-keyframes box-animation {
+            
+  0% {
+      top: 59%;
+  }
+
+  50% {
+      top: 55%; 
+  }
+
+  100% {
+      top: 59%; 
   }
 }
 
 @keyframes box-animation {
+            
   0% {
-    top: 59%;
+      top: 59%;
   }
+
   50% {
-    top: 55%;
+      top: 55%; 
   }
+
   100% {
-    top: 59%;
+      top: 59%; 
   }
 }

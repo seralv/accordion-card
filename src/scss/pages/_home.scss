@@ -3,45 +3,52 @@ main {
   margin: 160px 20px;
   padding: 5px;
   border-radius: 25px;
-  @include respond-to('small') {
-    .graphics-desktop, .graphics-desktop-box {
-      display: none;
-    }
-    .graphics-mobile {
-      width: 100%;
-      position: relative;
-      img {
-        max-width: 100%;
-      }
-    }
-    .woman-mobile {
-      position: absolute;
-      z-index: 3;
-      width: 80%;
-      top: -135px;
-      left: 50%;
-      transform: translateX(-50%);
-      animation: box-animation 2.5s infinite ease-in-out;
-    }
-    .pattern-mobile {
-      position: absolute;
-      width: 80%;
-      z-index: 2;
-      left: 50%;
-      transform: translateX(-50%);
-      animation: pattern-animation 2.5s infinite ease-in-out;
+  .graphics-desktop, .graphics-desktop-box {
+    display: none;
+  }
+  .graphics-mobile {
+    width: 100%;
+    position: relative;
+    img {
+      max-width: 100%;
     }
   }
+  .woman-mobile {
+    position: absolute;
+    z-index: 3;
+    width: 80%;
+    top: -135px;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-animation: box-animation-woman 2.5s infinite ease-in-out;
+            animation: box-animation-woman 2.5s infinite ease-in-out;
+  }
+  .pattern-mobile {
+    position: absolute;
+    width: 80%;
+    z-index: 2;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-animation: pattern-animation 2.5s infinite ease-in-out;
+            animation: pattern-animation 2.5s infinite ease-in-out;
+  }
   @include respond-to('large') {
-    margin: 140px 230px;
-    .graphics-mobile {
-      display: none;
-    }
+    display: flex;
+    margin: 150px;
+    padding: 0;
     .graphics {
+      width: 50%;
       overflow: hidden;
     }
-    .graphics-desktop, .graphics-desktop-box, .graphics-desktop-pattern {
+    .graphics-mobile, .woman-mobile, .pattern-mobile {
+      display: none;
+    }
+    .graphics-desktop, .graphics-desktop-box {
       display: flex;
+    }
+    .graphics {
+      width: 50%;
+      overflow: hidden;
     }
     .graphics-desktop {
       width: 90%;
@@ -52,45 +59,44 @@ main {
       position: absolute;
       width: 200%;
       z-index: 97;
-      left: 0; //-430px;
-      top: 0; //-250px;
+      left: -430px;
+      top: -250px;
     }
     .graphics-desktop-box {
       position: absolute;
-      width: 22%;
+      width: 11%;
       z-index: 99;
-      left: 0;//-8%;
-      top: 0;//59%;
-      transform: translate(0, -50%);
-      animation: box-animation 3s infinite ease-in-out;
+      left: 9%;
+      top: 100px;
+      transform: translate(0, -390%);
+      -webkit-animation: box-animation 3s infinite ease-in-out;
+              animation: box-animation 3s infinite ease-in-out;
     }
     .graphics-desktop-woman {
       position: absolute;
       width: 100%;
       z-index: 98;
-      left: 0;//-10px;
-      top: 0;//50%;
+      left: -50px;
+      top: 50%;
       transform: translate(0, -50%);
     }
   }
-      
-  h1 {
-    color: $very-dark-desaturated-blue;
-    font-size: 30px;
-    font-weight: 700;
-    text-align: center;
-    margin-top: 150px;
-    @include respond-to('large') {
-      margin: 40px 0;
-      text-align: left;
-      padding: 0 0 0 415px;
-    }
-  }
   .wrapper {
-    @include respond-to('large') {
-      padding: 0 0 50px 400px;
-    }
     padding-bottom: 50px;
+    h1 {
+      color: $very-dark-desaturated-blue;
+      font-size: 30px;
+      font-weight: 700;
+      text-align: center;
+      margin-top: 150px;
+      @include respond-to('large') {
+        margin: 50px 15px 30px;
+        text-align: left;
+      }
+    }
+    @include respond-to('large') {
+      width: 50%;
+    }
     details {
       summary {
         color: $very-dark-grayish-blue;
