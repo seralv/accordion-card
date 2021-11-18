@@ -466,6 +466,7 @@ main {
   margin: 160px 20px;
   padding: 5px;
   border-radius: 25px;
+  max-width: 1124px;
 }
 main .graphics-desktop, main .graphics-desktop-box {
   display: none;
